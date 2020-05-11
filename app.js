@@ -6,21 +6,8 @@ const mainSection = document.getElementsByClassName('main__section');
 let currentMainSectionHeight = window.innerHeight; 
 let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-// resizeMainSections = () => {
-//     for (let i = 0; i < mainSection.length; i++) {
-//         mainSection[i].style.height = window.innerHeight + 'px'; 
-//     }
-//     currentMainSectionHeight = window.innerHeight;
-// };
-
-// window.addEventListener('resize', () => {
-//     resizeMainSections();
-// });
-
 document.addEventListener('DOMContentLoaded',function(event){
     const textMe = 'Silvia Petruta';
-
-    // resizeMainSections();
 
     typeWriter = (text, index, fncCallBack) => {
         if (index < text.length) {            
