@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded',function(event){
 
     headingLoaded = () => {
         document.getElementById('heading').setAttribute('class', 'loaded');
-
+        document.getElementsByClassName('smooth')[0].classList.add('loaded');
     }
 
     typeWriter(textMe, 0, headingLoaded);
