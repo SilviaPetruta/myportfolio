@@ -115,6 +115,22 @@
   i {
       color: white;
   }
+  
+  .fa-linkedin:hover {
+    color: #0e76a8;
+  }
+
+  .fa-github:hover {
+    color:#969696;
+  }
+
+  .fa-instagram:hover {
+    color: #d6249f;
+  }
+
+  #menuBtn__icon:hover {
+    color: #C7938B;
+  }
 
   .menuIcon {
     padding: 0px 10px 0px 30px;
@@ -322,4 +338,24 @@
 
 .fa-react {
   color: #61dbfb;
+}
+
+.tooltip #tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  font-size: 12px;
+  /* background: linear-gradient(to right top, #172c51, #1a345b, #1d3d66, #1f4670, #214f7b); */
+  background: #C7938B;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover #tooltiptext {
+  visibility: visible;
+  transform: translate(-120px, 50px);
 }

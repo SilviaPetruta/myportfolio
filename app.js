@@ -7,6 +7,7 @@ const smoothDiv = document.getElementById('smoothDiv');
 const homeAnchor = document.getElementById('homeAnchor');
 const iconsDiv = document.getElementById('iconsDiv');
 const menuWrap = document.getElementById('menuWrap');
+const emailIcon = document.getElementById('emailIcon');
 
 let currentMainSectionHeight = window.innerHeight; 
 let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -93,3 +94,8 @@ toggleHeader = () => {
         menuWrap.style.marginRight = 22 + 'px';
     }
 };
+
+emailIcon.addEventListener('click', () => {
+    navigator.clipboard.writeText("silvia_petruta@yahoo.com");
+    document.getElementById('tooltiptext').innerText = "Copied to clipboard";
+});
