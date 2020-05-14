@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silvia Petruta</title>
-
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
     <link rel="stylesheet" href="style.css">
+    
+    <title>Silvia Petruta</title>
 </head>
 <body>
     <section id="heading">
@@ -15,8 +18,8 @@
     <div class="smooth" id="smoothDiv">
         <header>
             <a href="#home" class="name" id="homeAnchor">Silvia Petruta</a>
-            <div class="wrap">
-                <div class="icons">
+            <div class="wrap" id="menuWrap">
+                <div class="icons" id="iconsDiv">
                     <a href="https://www.linkedin.com/in/silvia-petruta/" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/SilviaPetruta" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram "></i></a>
@@ -29,6 +32,7 @@
             </div>
             <nav id="flex-nav">
                 <ul class="flex-nav__list">
+                    <li class="flex-nav__item"><a href="#home" class="flex-nav__a">Home</a></li>
                     <li class="flex-nav__item"><a href="#aboutme" class="flex-nav__a">About me</a></li>
                     <li class="flex-nav__item"><a href="#skillset" class="flex-nav__a">Skill set</a></li>
                     <li class="flex-nav__item"><a href="#contact" class="flex-nav__a">Contact</a></li>
@@ -38,7 +42,7 @@
         <main id="main">
             <section class="main__section" id="home">
                 <div class="main-section-left">
-                    <h1>Home</h1>
+                    <h1>Portfolio</h1>
                 </div>
                 <div class="main-section-right"><div class="moon"></div>
                 </div>
@@ -60,13 +64,25 @@
             <section class="main__section" id="contact">
                 <div class="main-section-left">
                     <h1>Get in touch</h1>
+                    <form action="mailto:silvia@mail.com" id="contactForm">
+                        <div id="email">
+                            <input id="dr" type="text" required placeholder="Name">
+                            <input id="st" type="email" required placeholder="Email">
+                        </div>
+                        <input type="text" required placeholder="Subject">
+                        <textarea name="" id="message" required cols="30" rows="30"  placeholder="Message"></textarea>
+                        <input type="submit">
+                    </form>
                 </div>
                 <div class="main-section-right">
+                    <div id="mapContainer"></div>
                 </div>
             </section>
         </main>
     </div>
 
     <script src="app.js"></script>
+
+    <script src="mapAPI.js"></script>
 </body>
 </html>

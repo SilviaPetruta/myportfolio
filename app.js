@@ -5,6 +5,8 @@ const menuItems = document.getElementsByClassName('flex-nav__item');
 const mainSection = document.getElementsByClassName('main__section');
 const smoothDiv = document.getElementById('smoothDiv');
 const homeAnchor = document.getElementById('homeAnchor');
+const iconsDiv = document.getElementById('iconsDiv');
+const menuWrap = document.getElementById('menuWrap');
 
 let currentMainSectionHeight = window.innerHeight; 
 let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -31,9 +33,8 @@ headingLoaded = () => {
 }
 
 document.addEventListener('click', (event) => {
-    if (event.target.id == 'homeAnchor' 
-    || event.target.id == 'menuBtn__icon'
-    || event.target.classList.contains('flex-nav__a')) {
+    if (event.target.id == 'menuBtn__icon'
+        || event.target.classList.contains('flex-nav__a')) {
         toggleMenu();
     } 
 });
@@ -42,6 +43,7 @@ toggleMenu = () => {
     toggleMenuBtn();
     toggleMenuNav();
     toggleScroll();
+    toggleHeader();
 }
 
 toggleMenuBtn = () => {
@@ -62,7 +64,7 @@ toggleMenuNav = () => {
     } else {
         flexNav.style.display = 'flex';
     }
-}
+};
 
 toggleScroll = () => {
     if (smoothDiv.style.overflowY == 'hidden') {
@@ -70,6 +72,24 @@ toggleScroll = () => {
     } else {
         smoothDiv.style.overflowY = 'hidden';
     }
-}
+};
 
+toggleHeader = () => {
+    if (homeAnchor.style.display == 'none') {
+        homeAnchor.style.display = 'inline-block';
+    } else {
+        homeAnchor.style.display = 'none';
+    }
 
+    if (iconsDiv.style.display == 'none') {
+        iconsDiv.style.display = 'block';
+    } else {
+        iconsDiv.style.display = 'none';
+    } 
+    
+    if (menuWrap.style.marginRight == 22 + 'px') {
+        menuWrap.style.marginRight = 40 + 'px';
+    } else {
+        menuWrap.style.marginRight = 22 + 'px';
+    }
+};
